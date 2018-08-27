@@ -1,0 +1,25 @@
+.main-navbar {
+  background: #ffffff;
+  color: $primary_color;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  height: 60px;
+  // width: 33rem;
+  // margin: 0 auto;
+  &__logo {
+    height: 35px;
+  }
+  &__menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    li {
+      &:not(:last-child) {
+        padding-right: 20px;
+      }
+    }
+  }
+}

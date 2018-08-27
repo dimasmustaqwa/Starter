@@ -1,0 +1,78 @@
+html,
+body {
+  background: #F2F6F7 !important;
+  font-family: "Roboto";
+}
+
+.wrapper {
+  background: #ffffff;
+  box-shadow: 0 0 24px 0 rgba(112, 112, 112, 0.15);
+  padding: 0rem 0 1.6rem;
+  overflow-x: hidden;
+  flex: 1;
+  max-width: 33rem;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper-overlay {
+  // width: 33rem;
+  // margin: 0 auto;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background: #000;
+  z-index: 1034;
+  -webkit-transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  &.active {
+    opacity: 0.5;
+    visibility: visible;
+    -webkit-transition-delay: 0;
+    -moz-transition-delay: 0;
+    transition-delay: 0;
+  }
+}
+
+.material-icons {
+  vertical-align: middle;
+}
+
+.main-content {
+  margin-top: 60px;
+}
+
+.carousel-caption {
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  text-align: left;
+}
+
+.carousel-indicators {
+  bottom: 0;
+  justify-content: flex-start;
+  margin-left: 20px;
+  margin-right: 20px;
+  li {
+    background-color: #ffffff;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    &.active {
+      background-color: $primary_color;
+    }
+  }
+}

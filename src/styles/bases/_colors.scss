@@ -1,0 +1,18 @@
+$colours:
+"primary" $primary_color,
+"red" red;
+
+@each $i in $colours{
+	.bg-#{nth($i, 1)} {
+		background: nth($i, 2);
+  }
+  .color-#{nth($i, 1)} {
+		color: nth($i, 2);
+  }
+	.to-#{nth($i, 1)} {
+    &:hover,
+    &:focus {
+      color: nth($i, 2);
+    }
+  }
+}
